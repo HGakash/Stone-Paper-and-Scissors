@@ -3,13 +3,30 @@
     padding:0;
 }
 
-h1{
-    background-color: #081b31;
+h1 {
+    background: linear-gradient(45deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
+    background-size: 400% 400%;
     color: white;
     height: 5rem;
     text-align: center;
     line-height: 5rem;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 0 #d0d0d0,   /* Light gray bottom-left shadow */
+                 6px 6px 0 #aaaaaa,   /* Darker gray bottom-left shadow */
+                 9px 9px 0 rgba(0, 0, 0, 0.5); /* Dark bottom-left shadow */
+    animation: gradientShift 10s ease infinite;
 }
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
 
 .choice{
     height: 165px;
@@ -33,9 +50,9 @@ img{
     margin-top: 5rem;
 }
 .choice:hover{
-    background-color: #081b31;
+    background-color: #2b0831;
     cursor: pointer;
-    border-radius:50%;
+    border-radius:100%;
 }
 
 .score-board{
